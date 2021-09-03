@@ -24,7 +24,7 @@
                 <a class="logo-header link" href="./index.html" lang="en"><span class="half-logo-text logo-text">Web</span>Studio</a>
                 <ul class="header-list list">
                     <li class="header-item">
-                        <a class="header-link link" href="./index.html">Студия</a></li>
+                        <a class="header-link link active-link" href="./index.html">Студия</a></li>
                     <li class="header-item">
                         <a class="header-link link" href="./portfolio.html">Портфолио</a></li>
                     <li class="header-item">
@@ -53,7 +53,7 @@
         <section class="hero-section section">
             <div class="container container-hero">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="hero-btn" type="button">Заказать услугу</button>
+                <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!-- features -->
@@ -101,22 +101,31 @@
                <h2 class="activity-title">Чем мы занимаемся</h2>
             <ul class="activity-list list">
                 <li class="img-item">
-                    <img 
+                   <div class="activity-box"> 
+                       <img 
                     src="./images/1.jpg" 
                     alt="Написание программного обеспечения"
                     width="370">
+                    <h3 class="activity-overlay">Десктопные приложения</h3>
+                   </div>
                 </li>
                 <li class="img-item">
+                    <div class="activity-box">
                     <img 
                     src="./images/2.jpg" 
                     alt="Адаптация под мобильные устройства"
                     width="370">
+                    <h3 class="activity-overlay">Мобильные приложения</h3>
+                    </div>
                 </li>
                 <li class="img-item">
+                    <div class="activity-box">
                     <img 
                     src="./images/3.jpg" 
                     alt="Дизайнерские разработки"
                     width="370">
+                    <h3 class="activity-overlay">Дизайнерские решения</h3>
+                    </div>
                 </li>
             </ul>
             </div>
@@ -408,6 +417,18 @@
         </div>
 </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="button-modal" data-modal-close>
+                <svg class="button-close">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+
+        </div>
+
+    </div>
+    <script src="./js/modal.js"></script>
     
 </body>
 </html>
